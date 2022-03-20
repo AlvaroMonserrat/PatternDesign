@@ -117,12 +117,14 @@ void ClientCode(const AbstractFactory &factory){
 int main()
 {
     cout << "Client: Testing client code with the first factory type:\n";
-    ConcreteFactory1 *f1 = new ConcreteFactory1();
+    //Factory for Window GUI
+    ConcreteFactory1 *factoryA = new ConcreteFactory1();
     ClientCode(*f1);
     delete f1;
 
     cout << "Client: Testing the same client code with the second factory type:\n";
-    ConcreteFactory2 *f2 = new ConcreteFactory2();
+    //Factory for Linux GUI
+    ConcreteFactory2 *factoryB = new ConcreteFactory2();
     ClientCode(*f2);
     delete f2;
 
